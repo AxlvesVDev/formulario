@@ -4,7 +4,6 @@
 #app { 
     display: grid;
     grid-template-columns: 51.25% 48.75%; /* soma dos dois da 100, para os lados ficarem dividos  */ 
-
     height: 100vh; /* altura fixa */ 
 
 }
