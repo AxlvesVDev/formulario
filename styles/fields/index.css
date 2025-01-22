@@ -1,0 +1,53 @@
+input, textarea, select { 
+appearance: none;    /* ele tira a setinha do select */
+width: 100%; /* todos eles ja ficaram esticados, colocando essa propriedade */ 
+border-radius: .5rem;
+border: 1px solid var(--stroke-default);
+
+padding: .75rem 1rem;   /* .75 em cima e embaixo e 1rem nas laterais  */ 
+
+font: var(--text);
+}
+
+label { 
+    font: var(--text-sm);
+    color: var(--text-secondary);
+
+    display: block;   /* precisei colocar block para que aceite a margem bottom pra gente  */ 
+    margin-bottom: .25rem;
+}
+
+input:focus, select:focus,
+textarea:focus { 
+    outline: .25rem solid var(--surface-secondary); /* quando esta "focado" ou seja, quando clico no campo, a borda fica nessa cor que eu quero*/ 
+    border: .125rem solid var(--stroke-highlight);
+    outline-offset: .1px; /* hackzinho pra funcionar no navegador Safari  */ 
+}
+
+input [type=date]   { /* (input que tenha o tipo "date"  */
+    position: relative;
+  
+    &::-webkit-calendar-picker-indicato { 
+        opacity: 0; 
+      }
+
+      
+&::before { 
+    conrent:"";		
+    position: absolute; 
+    background: url(../../Assets/icons/calendar-03.svg)
+    center/contain;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+
+     top: 50%; /* estou deixando o icone de calendario no meio do campo  */ 
+     transform: translateY(50%);  /* aq peguei o proprio icone, e joguei 50% pra cima */ 
+
+   }
+
+} 
+
+select { 
+    background: url(../../Assets/icons/arrow-down-01.svg) no-repeat calc(100% -1rem);
+}

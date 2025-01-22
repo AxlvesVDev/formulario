@@ -15,80 +15,86 @@
 </head>
 <body>
     <div id="app">
-     <main>
-        <div class="main-container"></div>
-        <div class="back">
-        <img src="Assets/icons/arrow-left-02.svg" alt="">
-         <span>Voltar</span>
+        <main>
+            <div class="main-container">
+             <div class="back">
+            <img src="Assets/icons/arrow-left-02.svg" alt="">
+            <span>Voltar</span>
+             </div>    
 
-        <h1>Formulário de Matrícula</h1>
-        <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p> 
-        
-        <!-- extrema importancia todos campos ter name, pois quando enviarmos o formulario é por ele que vai puxar, pode ser o mesmo do ID -->
-        <form> 
-           <fieldset class="child-info">
-            <legend>Informações da criança</legend>
-                <div class="input-wraper">
-                <label for="fullname">Nome Completo</label>
-                <input 
-                id="fullname" 
-                name="fullname"
-                type="text"
-                placeholder="Qual o nome da criança">    
-             </div>
+
+             <h1>Formulário de Matrícula</h1>
+             <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã.</p>
+             <form>
+                <fieldset class="child-info">
+                    <legend>Informações da Criança</legend>
+
+                    <div class="input-wrapper">
+                    <label for="fullname">Nome Completo</label>
+                    <input id="fullname"  type="text" placeholder="Qual o nome da Criança">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="">Data de nascimento</label>
+                        <input type="date" name="birth" id="birth" lang="pt-br">
+                    </div>
             
-        <div class="input-wrapper">
-            <label for="">Data de nascimento</label>
-            <input type="date" name="birth" id="birth" lang="pt-br">
-        </div>
+                    <div class="select-wrapper">
+                        <label for="gender">Sexo</label>
+                        <select name="gender" id=""></select>
+                        <option value="female">Feminino</option>
+                        <option value="male">Masculino</option>
+                        <option value="na">Prefiro não responder</option>
+                        
+                    </div>
+            
+                    <div class="text-area-wrapper">
+                    <label for="medical-info">Informações médicas</label>
+                    <textarea name="medical-info" id="medical-info"
+                    cols="30" rows="10" placeholder="A criança possui alguma condição médica, 
+                    que a escola deve estar ciente? (Se sim, especifique.)"
+                    
+                    ></textarea>
+            
+                    </div>
+            
+            
+                    <div class="droparea-wrapper">
+                        <input type="file" id="birth-file" name="birth-file">
+                        <img src="Assets/icons/cloud-upload.svg" alt="seleciona os arquivos">
+                        <p>
+                           Clique aqui para <br> 
+                           selecionar os arquivos 
+                        </p>
+                    </div>
 
-        <div class="select-wrapper">
-            <label for="gender">Sexo</label>
-            <select name="gender" id=""></select>
-            <option value="female">Feminino</option>
-            <option value="male">Masculino</option>
-            <option value="na">Prefiro não responder</option>
-        </div>
+               
+               
+                </fieldset>
 
-        <div class="text-area-wrapper">
-        <label for="medical-info">Informações médicas</label>
-        <textarea name="medical-info" id="medical-info"
-        cols="30" rows="10" placeholder="A criança possui alguma condição médica, 
-        que a escola deve estar ciente? (Se sim, especifique.)"
-        
-        ></textarea>
-
-        </div>
+             </form>
+            </div>
+        </main>
 
 
-        <div class="droparea-wrapper">
-            <input type="file" id="birth-file" name="birth-file">
-            <img src="Assets/icons/cloud-upload.svg" alt="seleciona os arquivos">
+
+    <aside>
+        <div class="aside-container">
+          <header>
+            <img src="Assets/icons/logo.svg" alt="">
+            <h2>Porque cada momento de 
+                <span>aprendizado</span> 
+                conta</h2>
             <p>
-               Clique aqui para <br> 
-               selecionar os arquivos 
+                Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.    
             </p>
+          </header>
+          <img src="Assets/icons/Illustration.svg" alt="">
+
+
         </div>
-
-           </fieldset> 
-        </form>
-
-        </div>
-     </main>
-
-<aside>
-    <div class="aside-container"></div>
-    <header>
-        <img src="Assets/icons/logo.svg" alt="">
-        <h2>Porque cada momento de 
-            <span> aprendizado</span> 
-            conta</h2>
-        <p>Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.</p>
-    </header>
-<img src="Assets/icons/Illustration.svg" alt="ilustração de crianças com professora">
-
-</aside>
- </div>
-
+    </aside>    
+    </div>
+ 
 </body>
 </html>

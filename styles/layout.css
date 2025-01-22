@@ -4,61 +4,73 @@
 #app { 
     display: grid;
     grid-template-columns: 51.25% 48.75%; /* soma dos dois da 100, para os lados ficarem dividos  */ 
+  
     height: 100vh; /* altura fixa */ 
+    overflow: hidden;
 
 }
 
 main { 
     overflow: auto; 
    padding: 4rem;  /*essa conta aqui é a soma dos paddings no figma fizemos 64 dividido por 16 */
-   &.main-container {    /* nasting css, isso é no css novo, sempre bom validar qual navegador nossos clientes estao usando */
+  
+   & .main-container {    /* nasting css, isso é no css novo, sempre bom validar qual navegador nossos clientes estao usando */
     max-width: 33rem;
     margin-left: auto; /* preenche a esquerda, deixando nosso texto para direita */ 
   } 
-
+ 
   & .back { 
-    display: flex;   /* apesar de ja estar, vamos deixar mais alinhado */
+    display: flex;
     align-items: center;
-    gap: .5rem; 
-    margin-bottom: 1.5rem;  
-   } 
-   
-   & h1 { 
-       font: 600 1.5rem/1.25 var(--font-family);
-       margin-bottom: 1.5rem;
-    } 
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+  }
 
-   }
+  & h1 { 
+    font: 600 1.5rem/1.25 var(--font-family);
+    margin-bottom: .5rem;
+
+  }
+
+}
    
+
+
+
+
+
+
+
+
   
    aside { 
     background-color: var(--surface-secondary);
     padding: 4rem; 
-
+   
     
-    &.aside-container { 
+    & .aside-container { 
     max-width: 31rem; 
+    
+    & > img { 
+        margin-top: 2rem;
 
-    & > img {    /* pegando a imagem do aside container */
-     margin-top: 2rem;  
     }
 
     }
-
-
-
-
-    & h2 { 
-        font: 600 2.5rem/1.25 var(--font-family);  /* como nao criamos variavel para essa font, estamos criando na mao mesmo */ 
-        margin-bottom: .5rem;
-        
-        & span { 
-            color: var(--text-highlight);  /* o laranja do "aprendizado"   */ 
-           } 
     
-    
-    } 
+& h2 { 
+    font: 600 2.5rem/1.5 var(--font-family);
+    margin-bottom: .5rem;
+
+    & span { 
+        color: var(--text-highlight);
+
+    }
+
+}
+
+} 
 
     
       
-   }
+   
