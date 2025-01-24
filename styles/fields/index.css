@@ -1,3 +1,5 @@
+@import url(droparea.css);
+
 input, textarea, select { 
 appearance: none;    /* ele tira a setinha do select */
 width: 100%; /* todos eles ja ficaram esticados, colocando essa propriedade */ 
@@ -18,7 +20,8 @@ label {
 }
 
 input:focus, select:focus,
-textarea:focus { 
+textarea:focus,
+input[type="date"]:focus-within { 
     outline: .25rem solid var(--surface-secondary); /* quando esta "focado" ou seja, quando clico no campo, a borda fica nessa cor que eu quero*/ 
     border: .125rem solid var(--stroke-highlight);
     outline-offset: .1px; /* hackzinho pra funcionar no navegador Safari  */ 
