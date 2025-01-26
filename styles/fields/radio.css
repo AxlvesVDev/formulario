@@ -1,0 +1,68 @@
+label + .radio-wrapper { 
+    margin-top: 1rem;
+
+}
+
+
+.radio-wrapper { 
+ display: grid;
+/* explicando esse codigo, aqui ele esta colocando o grid, de uma forma "inteligente" onde 
+as colunas se repetem porem tem um minimo e maxim largura da imagem é 120px, entao dividimos 120:6 que deu 7.5*/ 
+grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr)); 
+gap: 1rem;
+
+
+}
+
+
+
+.radio-inner { 
+    border: 1px solid var(--stroke-default);
+    border-radius: .5rem;
+
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    padding: 2rem .5rem .5rem;  /* em cima, laterais, e embaixo */ 
+    position: relative;
+
+    & input, 
+   & input:focus,
+   & input:hover { 
+    all: unset;                       /*  selecionamentos todos input e tiro todas infos do input */ 
+    position: absolute; 
+    inset: 0;
+ }
+  
+  .radio-image { 
+    background-image: url(../../Assets/icons/radio-default.svg) ;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+  }
+
+  &:hover, &:focus-within {   /* se passa ou mouse em cima OU se tem alguma coisa la dentro tem foco ..  */ 
+    border: 1px solid var(--stroke-highlight);
+
+ .radio-image { 
+    background-image: url(../../Assets/icons/radio-hover.svg);
+
+ }
+  }
+  
+  &:has(:checked) { /* has é "ter" quando tiver um checked ..  */
+    border: 2px solid var(--stroke-highlight);
+    
+    & .radio-image { 
+        background-image: url(../../Assets/icons/radio-checked.svg);
+
+    }
+
+
+  }    
+
+  }
